@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>HTML forms</h1>
+        <div>
+            <form action="form.php">
+                <input type="text" placeholder="Enter your Name">
+                <input type="datetime-local" placeholder="Enter the time of travel">
+                <input type="email" placeholder="Enter your email address">
+                <input type="button" placeholder="button 1">
+                <label for="sectionIdA">
+                    <input type="radio" value="Section A" name="section" id="sectionIdA">Section_A
+                </label>
+                <label for="sectionIdB">
+                    <input type="radio" value="Section B" name="section" id="sectionIdB">Section_B
+                </label>
+
+                <br>
+                <!--Fieldset is used to group similar sections in a form. It also draws a box around them-->
+                <fieldset>
+                    <legend>Choose your special power:</legend>
+                    <div>
+                        <input type="checkbox" value="Teleportation" id="Teleportation" name="superPower">
+                        <label for="Teleportation">Teleportation</label>
+                        <input type="checkbox" value="TimeTravel" id="TimeTravel" name="superPower">
+                        <label for="TimeTravel">TimeTravel</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <!--The legend tag is used to define a caption for the element12. The tag is the parent element and is used to define the title for the child contents-->
+                    <legend>Choose the color of your spell</legend>
+                    <div>
+                        <input type="color" name = "spell_color_1" id = "spell_color_1" value="#e01199">
+                        <label for="spell_color_1">Color 1</label>
+                        <input type = "color" name = "spell_color_2" id = "spell_color_2" value = "#e22703">
+                        <label for = "spell_color_2">Color 2</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <legend>
+                        Choose the date when you would like to activate your spell
+                    </legend>
+                    <input type = "date" value = "2023-10-07" min = "2023-10-01" max = "2023-10-30" name = "date of spell" id = "date_of_spell">
+                    <label for = "date_of_spell"></label>
+                </div>
+                <div>
+                    <legend for = "profilepicture">Choose a profile picture for the game</legend>
+                    <input type = "file" id = "profilepicture" name = "profilepicture" accept="image/png, image/jpeg">
+                </div>
+                <div>
+                    <input type = "hidden" name = "portId" id = "portId" value = "1234">
+                </div>
+                
+                <label for="SubmitButton">
+                    <input type="button" name="SubmitButton" id="SubmitButton" value="click here to submit">
+                </label>
+            </form>
+        </div>
+
+    </main>
+</body>
+
+</html>
