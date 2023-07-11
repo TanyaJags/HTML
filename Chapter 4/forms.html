@@ -41,34 +41,67 @@
                     <!--The legend tag is used to define a caption for the element12. The tag is the parent element and is used to define the title for the child contents-->
                     <legend>Choose the color of your spell</legend>
                     <div>
-                        <input type="color" name = "spell_color_1" id = "spell_color_1" value="#e01199">
+                        <input type="color" name="spell_color_1" id="spell_color_1" value="#e01199">
                         <label for="spell_color_1">Color 1</label>
-                        <input type = "color" name = "spell_color_2" id = "spell_color_2" value = "#e22703">
-                        <label for = "spell_color_2">Color 2</label>
+                        <input type="color" name="spell_color_2" id="spell_color_2" value="#e22703">
+                        <label for="spell_color_2">Color 2</label>
                     </div>
                 </fieldset>
                 <div>
                     <legend>
                         Choose the date when you would like to activate your spell
                     </legend>
-                    <input type = "date" value = "2023-10-07" min = "2023-10-01" max = "2023-10-30" name = "date of spell" id = "date_of_spell">
-                    <label for = "date_of_spell"></label>
+                    <input type="date" value="2023-10-07" min="2023-10-01" max="2023-10-30" name="date of spell"
+                        id="date_of_spell">
+                    <label for="date_of_spell"></label>
                 </div>
                 <div>
-                    <legend for = "profilepicture">Choose a profile picture for the game</legend>
-                    <input type = "file" id = "profilepicture" name = "profilepicture" accept="image/png, image/jpeg">
+                    <label for="profilepicture">Choose a profile picture for the game</label>
+                    <!--used when you want to get any file as input-->
+                    <input type="file" id="profilepicture" name="profilepicture" accept="image/png, image/jpeg">
+                </div>
+                <br>
+                <div>
+                    <label for="profilepicture alternate">Choose a profile picture for the game</label>
+                    <!--image/* means it accepts ay time of image as an input-->
+                    <input type="file" id="profilepicture alternate" name="profilepicture" accept="image/*, pdf">
                 </div>
                 <div>
-                    <input type = "hidden" name = "portId" id = "portId" value = "1234">
+                    <!--Hidden is used when you want to collect some data but dont want it to be shown on the webpage. it is usually used when you want to note the record number of the form-->
+                    <input type="hidden" name="portId" id="portId" value="1234">
                 </div>
-                
+                <div>
+                    <label for="loginbutton">
+                        <!--Takes image as a button. Here we do not mention the value for the input instead we mention the url of the image in the src tag-->
+                        <input type="image" name="loginbutton" id="loginbutton" alt="loginbutton"
+                            src="https://th.bing.com/th/id/OIP.DS8_-zPolUSDmI2xkmBDDgHaCS?pid=ImgDet&rs=1">
+                    </label>
+                </div>
+                <div>
+                    <label for="yourtext">
+                        <!--The textarea tag is used to get multiple lines of text as input. Usually used to get comments or reviews. It has unlimited number of characters as input -->
+                        <textarea name="textarea" id="yourtext" cols="60" rows="10"
+                            placeholder="Enter additional details about your fictional character"></textarea>
+                    </label>
+                </div>
+                <div>
+                    <label for="optionofyourdemon"> selectanoptionfromthedropdown:
+                        <select name="optionofyourdemon" id="optionofyourdemon" value = ""> 
+                            <option value="Demon">Select your Demon</option>
+                            <option value="Monstor">Monster</option>
+                            <option value="Devil">Devil</option>
+                            <option value="Nun">Nun</option>
+                            <option value="Thanos">Thanos</option>
+                        </select>
+                    </label>
+                </div>
                 <label for="SubmitButton">
                     <input type="button" name="SubmitButton" id="SubmitButton" value="click here to submit">
                 </label>
+
             </form>
         </div>
 
     </main>
 </body>
-
 </html>
